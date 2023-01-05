@@ -1,0 +1,11 @@
+{% extends "default.html" %}
+{% load custom_filters %}
+{% load custom_tags %}
+{% block title%}Hello world{% endblock title%}
+{% block content%}
+<h1>Hello content item content</h1>
+<p>{{ news_detail.title|censor }}</p>
+<p>{{ news_detail.content|censor }}</p>
+<p>{{ news_detail.time_create|date:'d-b-Y' }}</p>
+<p>{% news_only %}</p>
+{% endblock content%}
